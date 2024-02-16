@@ -1,0 +1,41 @@
+@mixin xs{
+    @media(min-width: 375px){
+        @content;
+    }
+}
+
+@mixin ss{
+    @media(min-width: 425px){
+        @content;
+    }
+}
+
+@mixin sm{
+    @media(min-width: 576px){
+        @content;
+    }
+}
+
+@mixin pad {
+    @media(min-width: 768px){
+        @content;
+    }
+}
+
+@mixin pc{
+    @media(min-width:992px){
+        @content;
+    }
+}
+
+@mixin pc-xl{
+    @media(min-width:1200px){
+        @content;
+    }
+}
+
+@mixin pc-xxl{
+    @media(min-width:1400px){
+        @content;
+    }
+}
