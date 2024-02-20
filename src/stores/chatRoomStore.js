@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { ref as fireBaseRef, getDatabase, onValue, update, push, child} from "firebase/database";
 import axios from 'axios';
+import { getCurrentTime } from '@/utils';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 const firebaseConfig = {
@@ -17,9 +18,6 @@ const firebaseConfig = {
 
 const chatRoomApp = initializeApp(firebaseConfig);
 const db = getDatabase(chatRoomApp);
-
-import timeStore from '../stores/timeStore';
-const time = timeStore();
 
 export default defineStore ('chatRoomStore',{
     state:()=>({
@@ -219,7 +217,7 @@ export default defineStore ('chatRoomStore',{
                     msgKey,
                     "sender":this.userId,
                     msg,
-                    "time":time.getCurrentTime()
+                    "time":getCurrentTime()
                 }
                 //新增訊息
                 const updates = {};
@@ -227,7 +225,7 @@ export default defineStore ('chatRoomStore',{
                 update(fireBaseRef(db), updates) ;
                 //更新最新訊息時間
                 let lastestTime ={
-                    "time":time.getCurrentTime()
+                    "time":getCurrentTime()
                 }
                 const updateLatestTime={};
                 updateLatestTime[`/${roomKey}/lastestTime`] = lastestTime ;
