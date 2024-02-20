@@ -337,7 +337,6 @@ export default {
 
 
 <style lang="scss" scoped>
-  @import "../../assets/main";
 
   .chatBtn{
       position: fixed; /* Fixed/sticky position */

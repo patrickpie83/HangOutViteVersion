@@ -79,7 +79,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-  @import "../../assets/main";
 
   .chatRoomArea{
     //訊息視窗的高度

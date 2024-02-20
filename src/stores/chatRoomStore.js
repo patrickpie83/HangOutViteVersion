@@ -109,7 +109,6 @@ export default defineStore ('chatRoomStore',{
             }
         },
         updateData(){
-            console.log(`執行了一次updateData`)
             this.renderNavData = [];
             
             let promises = [];

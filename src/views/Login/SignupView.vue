@@ -55,7 +55,6 @@ export default {
 
 
 <style lang="scss" scoped>
-  @import "../../assets/main";
   
   .loginImg{
     width: 35%;

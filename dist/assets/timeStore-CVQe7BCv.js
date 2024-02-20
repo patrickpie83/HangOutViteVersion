@@ -1,1 +1,0 @@
-import{u as l}from"./index-Bw_72BcY.js";const i=l("timeStore",{state:()=>({}),actions:{getCurrentTime(){let e=new Date,a=e.getFullYear(),t=e.getMonth()+1,r=e.getDate(),o=e.getHours(),n=e.getMinutes(),s=e.getSeconds();return t=(t<10?"0":"")+t,r=(r<10?"0":"")+r,o=(o<10?"0":"")+o,n=(n<10?"0":"")+n,s=(s<10?"0":"")+s,`${a}-${t}-${r} ${o}:${n}:${s}`}}});export{i as t};

@@ -18,7 +18,6 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "../assets/main";
 
   .goBtn{
     &:hover{

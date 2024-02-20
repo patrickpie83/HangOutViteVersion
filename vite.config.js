@@ -8,7 +8,6 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  // base: '/HangOutViteVersion/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

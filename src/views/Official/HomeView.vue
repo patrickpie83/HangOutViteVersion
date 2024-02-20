@@ -61,7 +61,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-  @import "../../assets/main";
 
   .banner{
     background-image: url("https://github.com/patrickpie83/HangOut/blob/master/public/images/img_banner.png?raw=true");

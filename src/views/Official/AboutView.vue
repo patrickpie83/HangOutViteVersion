@@ -37,7 +37,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-  @import "../../assets/main";
 
   .backToHomeBtn{
     &:hover{

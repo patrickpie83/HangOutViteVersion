@@ -660,7 +660,6 @@ export default {
 
 
 <style lang="scss" scoped>
-  // @import "../../assets/main";
 
   .headPicEffect{
     border: 4px solid $hangout-primary;

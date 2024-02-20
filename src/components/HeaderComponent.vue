@@ -39,7 +39,6 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "../assets/main";
 
   header{
     padding: 16px 0px 16px 0px;
