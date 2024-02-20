@@ -1,14 +1,24 @@
 <script>
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import LoginNav from '@/components/LoginNav.vue';
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import loginStore from '../../stores/loginStore.js';
-import router from '@/router';
 
 export default {
   components:{
     LoginNav,
     HeaderComponent
+  },
+  // 利用 navigation guard 可以避免這個 component 被 mount，從而提升效率，或避免畫面閃現而過
+  // https://router.vuejs.org/guide/advanced/data-fetching.html#Fetching-Before-Navigation
+  beforeRouteEnter(to, from, next){
+    const userId= localStorage.getItem("userId");
+    if (userId) {
+      next({ path: '/browse' })
+    }
+    else {
+      next()
+    }
   },
   setup(){
     const loginInfo = ref({
@@ -17,14 +27,6 @@ export default {
     })
 
     const { login } = loginStore();
-    const userId = ref("");
-
-    onMounted(()=>{
-      userId.value = localStorage.getItem("userId");
-      if(userId.value){
-        router.push('/browse');
-      }
-    })
 
     return{
       loginInfo,
